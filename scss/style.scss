@@ -72,7 +72,7 @@ nav {
         .subMenu {
             width: 100px;
             height: 80px;
-
+            z-index: 2;
             color: white;
             background-color: black;
             position: absolute;
@@ -120,9 +120,192 @@ nav {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-#services {
-    height: 350px;
+
+#header .container {
+    position: relative;
+
 }
+
+%arrow {
+    font-size: 70px;
+    color: $main_color;
+    position: absolute;
+    top: 200px;
+    padding: 15px 23px;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        color: darken($main_color, 4);
+    }
+}
+
+#arrowLeft {
+    @extend %arrow;
+    left: 2px;
+}
+
+#arrowRight {
+    @extend %arrow;
+    right: 10px;
+}
+
+.headerContent {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    img {
+        transform: scale(1.25) translateX(-50px);
+        display: inline-block;
+        position: absolute;
+    }
+
+    .headerText {
+        float: left;
+        width: 550px;
+        position: absolute;
+        right: 100px;
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+            padding-top: 22px;
+            margin-left: -20px;
+            font-size: 2.4em;
+            font-weight: 500;
+            letter-spacing: 1px;
+
+        }
+
+        span {
+            color: $main_color;
+            font-weight: 700;
+        }
+
+        p {
+            padding: 30px 50px;
+            transform: translateX(-10px);
+            font-size: .95em;
+            line-height: 1.4em;
+            color: #333333;
+        }
+
+
+        .button {
+            background-color: $main_color;
+            margin: 0 auto;
+            width: 250px;
+            height: 40px;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            transform: translateX(-8px) translateY(4px);
+
+            a {
+                display: block;
+                width: 250px;
+                text-decoration: none;
+                color: white;
+                font-size: 23px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                line-height: 40px;
+            }
+
+            &:hover {
+                background-color: darken($main_color, 4);
+            }
+        }
+
+        &::after {
+            clear: both;
+        }
+    }
+}
+
+
+#chairs {
+    padding-left: 10px;
+    padding-top: 30px;
+    height: 330px;
+}
+
+
+
+.thumbnail {
+    width: 333px;
+    height: 230px;
+    position: relative;
+    float: left;
+
+}
+
+
+
+.thumb1 {
+    background: transparent url('../images/box1_img.jpg') no-repeat center/cover;
+    margin-right: 27px;
+}
+
+.thumb2 {
+    background: transparent url('../images/box2_img.jpg') no-repeat center/cover;
+    margin-right: 27px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(230, 230, 230, .6);
+
+}
+
+
+.caption p {
+    padding-top: 10px;
+    margin-left: 15px;
+    width: 45%;
+    border-bottom: 7px solid #00cccc;
+    font-weight: 500;
+}
+
+.thumb3 {
+    border: 1px solid lightgray;
+    height: 250px;
+
+}
+
+.thumb3 h1 {
+    width: 45%;
+    border-bottom: 7px solid #00cccc;
+    font-size: 16px;
+    display: inline-block;
+    padding-top: 25px;
+    margin-left: 25px;
+
+}
+
+.thumb3 p {
+    padding: 10px 10px 10px 20px;
+    font-size: .9em;
+    line-height: 20px;
+    color: #888;
+}
+
+
+.box {
+    width: 320px;
+    height: 220px;
+    border: 1px solid lightgray;
+    margin: 15px;
+    display: inline-block;
+}
+
+
+
 
 #pricing {
     height: 730px;
