@@ -1,4 +1,4 @@
-$main_color: #00cccc;
+$main_color: #24baa0;
 .hidden {
     display: none;
 }
@@ -229,7 +229,7 @@ nav {
 #chairs {
     padding-left: 10px;
     padding-top: 30px;
-    height: 330px;
+    height: 310px;
 }
 
 
@@ -268,7 +268,7 @@ nav {
     padding-top: 10px;
     margin-left: 15px;
     width: 45%;
-    border-bottom: 7px solid #00cccc;
+    border-bottom: 7px solid $main_color;
     font-weight: 500;
 }
 
@@ -280,7 +280,7 @@ nav {
 
 .thumb3 h1 {
     width: 45%;
-    border-bottom: 7px solid #00cccc;
+    border-bottom: 7px solid $main_color;
     font-size: 16px;
     display: inline-block;
     padding-top: 25px;
@@ -310,13 +310,240 @@ nav {
 #pricing {
     height: 730px;
     background-color: #f2f2f2;
+
+    h1 {
+        text-transform: uppercase;
+        width: 320px;
+        color: #575757;
+        border-bottom: 7px solid $main_color;
+        font-weight: 400;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 40px;
+        padding-bottom: 3px;
+
+    }
 }
 
-#calc {}
+
+.marginRight24 {
+    margin-right: 24px;
+}
+
+
+
+
+
+
+.box {
+    width: 322px;
+    height: 500px;
+    border: 2px solid lightgray;
+    margin-top: 78px;
+    border-radius: 2px;
+    position: relative;
+    background-color: white;
+    float: left;
+
+
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 23px;
+        font-weight: 400;
+        color: $main_color;
+    }
+
+    .price {
+        width: 130px;
+        height: 125px;
+        border-radius: 50%;
+        margin: 30px auto;
+        border: 2px solid lightgray;
+        position: relative;
+
+
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid lightgray;
+        left: 135px;
+        top: -40px;
+        background-color: white;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        left: 150px;
+        top: -26px;
+        background-color: lightgray;
+    }
+
+
+}
+
+
+.amount {
+    color: lightgray;
+    font-size: 43px;
+    position: relative;
+    top: 25px;
+    left: 35px;
+    font-weight: 700;
+
+}
+
+.up {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+}
+
+span.amount[data-id="3"] {
+    left: 17px;
+}
+
+.pln_msc {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    color: lightgray;
+}
+
+.details {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        text-align: center;
+        width: auto;
+        padding: 7px;
+        font-size: 1.5em;
+        color: #888;
+    }
+
+    li:nth-of-type(2n + 1) {
+        background-color: lightgray;
+    }
+
+    li:nth-of-type(2n + 2) {
+        background-color: #f2f2f2;
+    }
+}
+
+
+.btn {
+    position: absolute;
+    width: 120px;
+
+    height: 25px;
+    bottom: 30px;
+    left: 105px;
+    text-align: center;
+
+
+
+    a {
+        display: block;
+        border-radius: 5px;
+        padding: 5px;
+        line-height: 25px;
+        text-decoration: none;
+        background-color: $main_color;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:hover {
+            background-color: darken($main_color, 4);
+        }
+    }
+}
+
+
+.boxActive {
+    background-color: $main_color;
+    border-color: $main_color;
+
+    &:before {
+        background-color: $main_color;
+        border-color: $main_color;
+    }
+    &:after {
+        background-color: #fff;
+
+    }
+
+    .price {
+        background-color: #fff;
+        border: none;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    .amount {
+        color: $main_color;
+    }
+
+    .pln_msc {
+        color: $main_color;
+    }
+
+    li:nth-of-type(2n + 1) {
+        background-color: #fff;
+    }
+
+    .btn a {
+        background-color: #fff;
+        color: $main_color;
+
+        &:hover {
+            background-color: darken(#fff, 4);
+        }
+    }
+}
+
+
+.application {
+    padding-left: 80px;
+}
+
 
 #contact {
     height: 600px;
+
+    h1 {
+        text-transform: uppercase;
+        width: 320px;
+        color: #575757;
+        border-bottom: 7px solid $main_color;
+        font-weight: 400;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 40px;
+        padding-bottom: 3px;
+
+    }
 }
+
+
 
 footer {
     height: 50px;
