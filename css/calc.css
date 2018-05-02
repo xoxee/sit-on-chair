@@ -44,7 +44,7 @@ body {
 .list_label {
     font-size: 30px;
     color: #e2e2e2;
-    font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -144,7 +144,7 @@ body {
     padding: 10px 30px;
     font-size: 24px;
     display: inline-block;
-    font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin-top: 20px;
     margin-left: 29px;
     border-radius: 8px;

@@ -1,4 +1,4 @@
-$main_color: #24baa0;
+$main_color: #27c7ab;
 .hidden {
     display: none;
 }
@@ -527,8 +527,7 @@ span.amount[data-id="3"] {
 
 
 #contact {
-    height: 600px;
-
+    padding-bottom: 50px;
     h1 {
         text-transform: uppercase;
         width: 320px;
@@ -541,10 +540,149 @@ span.amount[data-id="3"] {
         padding-bottom: 3px;
 
     }
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 }
 
 
+.contactForm {
+
+
+    float: left;
+
+    input {
+        display: block;
+
+        margin: 31px 20px;
+        width: 630px;
+        height: 60px;
+        border: 1px solid lighten($main_color, 20);
+        box-shadow: none;
+        font-size: 34px;
+        color: gray;
+        padding-left: 10px;
+        font-family: 'Raleway', sans-serif;
+
+        &::placeholder {
+            color: lightgray;
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            box-shadow: 0 1px 3px #d9d9d9;
+        }
+    }
+
+
+    textarea {
+        font-size: 34px;
+        padding-top: 10px;
+        color: gray;
+        padding-left: 10px;
+        display: block;
+        margin-left: 20px;
+        width: 630px;
+        height: 172px;
+        resize: none;
+        border-color: lighten($main_color, 20);
+        font-family: 'Raleway', sans-serif;
+        &::placeholder {
+            color: lightgray;
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            box-shadow: 0 1px 3px #cccccc;
+        }
+
+    }
+}
+
+.confirm {
+    float: left;
+    max-width: 410px;
+
+    img {
+        padding-left: 70px;
+        width: 250px;
+    }
+
+    input {
+        left: 30px;
+    }
+
+    label {
+        transform: translateY(-20px);
+        font-size: 20px;
+        padding-top: 0;
+        margin-left: 30px;
+    }
+
+
+}
+
+.contactButton {
+    transform: translateY(-10px);
+    margin: 0 0 0 30px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 70px;
+    width: 345px;
+    border-radius: 10px;
+    height: 70px;
+    color: #fff;
+    background-color: $main_color;
+
+    &:hover {
+        background-color: darken($main_color, 4);
+    }
+
+
+}
+
 
 footer {
+    padding: 10px 0 50px 40px;
     height: 50px;
+
+    p {
+
+        display: inline-block;
+        width: 690px;
+        color: #888;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+}
+
+.social {
+    transform: translateY(5px);
+    display: inline-block;
+    width: 170px;
+    img {
+        display: inline-block;
+    }
+
+}
+
+.footerLogo {
+    text-transform: uppercase;
+    text-align: right;
+    width: 180px;
+    color: gray;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 1px;
+
 }
