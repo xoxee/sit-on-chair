@@ -176,7 +176,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //Form
+    var name = document.querySelector('#name');
+    var email = document.querySelector('#email');
+    var msg = document.querySelector('#msg');
 
+    var validName = document.querySelector('#validName');
+    var validEmail = document.querySelector('#validEmail');
+    var validMsg = document.querySelector('#validMsg');
+
+    var succes = document.querySelector('#succes');
+    var form = document.querySelector('#form');
+
+
+    var rulesCheck = document.querySelector('#rulesCheck');
+
+    rulesCheck.addEventListener('click', function () {
+        this.classList.toggle('checked');
+    })
+
+
+    var contactButton = document.querySelector('.contactButton')
+
+    name.addEventListener('keydown', function () {
+        validName.innerText = "";
+    });
+
+    email.addEventListener('keydown', function () {
+        validEmail.innerText = "";
+    });
+
+
+    msg.addEventListener('keydown', function () {
+        validMsg.innerText = "";
+    });
+
+
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+
+    contactButton.addEventListener('click', function (e) {
+        succes.innerText = "";
+
+        if (!name.value) {
+            validName.innerText = "Podaj swoje imię";
+
+        } else if (name.value.length < 3) {
+            validName.innerText = "Imię za krótkie";
+        }
+
+
+        if (!validateEmail(email.value)) {
+            validEmail.innerText = "Błędny adres email";
+        }
+
+
+        if (!msg.value) {
+            validMsg.innerText = "Wpisz wiadomość";
+        }
+
+        if (!rulesCheck.classList.contains('checked')) {
+            validCheckbox.innerText = "Musisz wyrazić zgodę"
+        } else {
+            validCheckbox.innerText = "";
+        }
+
+        if (validName.innerText == "" && validEmail.innerText == "" && validMsg.innerText == "" && validCheckbox.innerText == "") {
+            //            form.submit();
+            name.value = "";
+            email.value = "";
+            msg.value = "";
+
+
+            succes.innerText = "Wiadomość wysłana";
+        }
+    })
 
 
 })

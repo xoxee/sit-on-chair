@@ -233,10 +233,14 @@
             <h1>Kontakt</h1>
 
             <div class="contactForm">
-                <form action="">
+                <form action="" id="form">
                     <input type="text" placeholder="Imię" id="name">
+                    <div class="valid" id="validName"></div>
                     <input type="text" placeholder="email" id="email">
+                    <div class="valid" id="validEmail"></div>
                     <textarea id="msg" placeholder="Wiadomość"></textarea>
+                     <div class="valid" id="validMsg"></div>
+                    <div id="succes"></div>
                 </form>
             </div>
 
@@ -246,6 +250,7 @@
                     <input type="checkbox" id="rulesCheck">
                     <label for="rulesCheck">Zgadzam się na przetwarzanie danych osobowych</label>
                 </div>
+                <div class="valid" id="validCheckbox"></div>
 
                 <div class="contactButton">
                     Wyślij
@@ -260,10 +265,10 @@
         <p>Copyright 2018 | All Rights Reserved. - Sit On Chair</p>
         
         <div class="social">
-            <img src="images/flickr.png" alt="">
-            <img src="images/vimeo.png" alt="">
-            <img src="images/pinterest.png" alt="">
-            <img src="images/twitter.png" alt="">
+            <a href=""><img src="images/flickr.png" alt=""></a>
+            <a href=""><img src="images/vimeo.png" alt=""></a>
+            <a href=""><img src="images/pinterest.png" alt=""></a>
+            <a href=""><img src="images/twitter.png" alt=""></a>
         </div>
         
         <div class="footerLogo">
